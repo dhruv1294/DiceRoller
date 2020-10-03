@@ -2,6 +2,7 @@ package com.example.diceroller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
@@ -21,6 +22,9 @@ class MainActivity : AppCompatActivity() {
         val resetButton: Button = findViewById(R.id.reset_button)
         resetButton.setOnClickListener { resetResult() }
         diceImage = findViewById(R.id.dice_image)
+        for(i in 1..10){
+            hello(diceImage)
+        }
     }
 
     private fun rollDice() {
@@ -42,6 +46,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun hello(v: View){
-
+     Log.i("Hey","This is Dk commiting changes")
     }
 }
